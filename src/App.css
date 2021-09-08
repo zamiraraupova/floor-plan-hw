@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
+/* div {
+  border: 1px solid grey;
+  margin: 5px;
+  padding: 5px;
+  } */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  div{
+    border: solid black 1px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .floorPlan {
+    display: grid; 
+    grid-template-columns: 2.5fr 0.8fr 1.7fr 0.5fr 0.5fr; 
+    grid-template-rows: 0.4fr 1.8fr 0.7fr 1.1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "bedroom1 livingroom livingroom oven sink"
+      "bedroom1 livingroom livingroom kitchen kitchen"
+      "full-bath livingroom livingroom kitchen kitchen"
+      "bedroom2 half-bath bedroom3 bedroom3 bedroom3"
+      "bedroom2 half-bath bedroom3 bedroom3 bedroom3"; 
+    height: 100vh;
+    width: 100vw;
+    
   }
-  to {
-    transform: rotate(360deg);
+  .bedroom {
+    background-color: rgb(62, 108, 164);
   }
-}
+  .oven { 
+    grid-area: oven; 
+    background-color: rgb(165, 64, 10);
+  }
+  .kitchen { 
+    grid-area: kitchen;
+    background-color: rgb(232, 174, 87);
+  }
+  .sink { 
+    grid-area: sink; 
+    background-color: brown;
+  }
+  #Bedroom-1 { 
+    grid-area: bedroom1; 
+  }
+  #Full-Bath { 
+    grid-area: full-bath;
+    background-color: olive; 
+  }
+  #Bedroom-2 { 
+    grid-area: bedroom2; 
+  }
+  #Half-Bath { 
+    grid-area: half-bath;
+    background-color: olive; 
+  }
+  #Bedroom-3 { 
+    grid-area: bedroom3; 
+  }
+  
+  .livingroom { 
+    grid-area: livingroom;
+    background-color: bisque;
+  }
+   
